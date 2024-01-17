@@ -26,6 +26,7 @@ const authOptions = {
   secret: "default_secret_key",
 };
 
+
 const nextAuth = NextAuth(authOptions);
 
 export { nextAuth as GET, nextAuth as POST };
