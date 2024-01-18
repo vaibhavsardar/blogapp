@@ -9,7 +9,7 @@ export async function GET(req) {
 
     const blogDetails = await prisma.post.findUnique({
       where: {
-        id: String(blogID),
+        id: String("65a8ebdd6075edad8195c402"),
       },
     });
 
