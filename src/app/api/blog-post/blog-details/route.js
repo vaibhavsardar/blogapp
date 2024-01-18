@@ -5,6 +5,7 @@ export async function GET(req) {
   try {
     const url = new URL(req.url);
     const blogID = url.searchParams.get("blogID");
+    console.log("b blogID",blogID)
 
     const blogDetails = await prisma.post.findUnique({
       where: {
