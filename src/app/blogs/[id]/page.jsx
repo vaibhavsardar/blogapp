@@ -20,6 +20,8 @@ async function extractBlogDetails(id) {
 
 export default async function BlogDetails({ params }) {
   const { id } = params;
+    console.log("blog id ", id);
+
 
   const blogData = await extractBlogDetails(id);
 
