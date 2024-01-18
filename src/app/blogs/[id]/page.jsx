@@ -4,7 +4,7 @@ import BlogDetailsHome from "@/components/blogs/blog-details";
 
 async function extractBlogDetails(id) {
   const res = await fetch(
-    `${process.env.URL}/api/blog-post/blog-details?blogID=${id}`,
+    `${process.env.URL}/api/blog-post/blog-details`,
     {
       method: "GET",
       next : {
