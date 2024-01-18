@@ -4,8 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req) {
   try {
     const url = new URL(req.url);
-    const blogID ="65a8ebdd6075edad8195c402"
-      // url.searchParams.get("blogID");
+    // const blogID ="65a8ebdd6075edad8195c402"
+    const blogID =  url.searchParams.get("blogID");
     console.log("b blogID",blogID)
 
     const blogDetails = await prisma.post.findUnique({
