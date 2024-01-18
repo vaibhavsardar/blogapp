@@ -8,12 +8,11 @@ export async function GET(req) {
     const blogID =  url.searchParams.get("blogID");
     console.log("b blogID",blogID)
 
-    const blogDetails = await prisma.post.findMany();
-    //   await prisma.post.findUnique({
-    //   where: {
-    //     id: String(blogID),
-    //   },
-    // });
+      await prisma.post.findUnique({
+      where: {
+        id: String(blogID),
+      },
+    });
   // const blogDetails =true
     if (blogDetails) {
       return NextResponse.json({
