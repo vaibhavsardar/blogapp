@@ -3,17 +3,18 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req) {
   try {
-    const url = new URL(req.url);
-    // const blogID ="65a8ebdd6075edad8195c402"
-    const blogID =  url.searchParams.get("blogID");
+    // const url = new URL(req.url);
+    const blogID ="65a8ebdd6075edad8195c402"
+    // const blogID =  url.searchParams.get("blogID");
     console.log("b blogID",blogID)
 
-      await prisma.post.findUnique({
-      where: {
-        id: String(blogID),
-      },
-    });
-  // const blogDetails =true
+  const blogDetails = "fhfhf"
+    // await prisma.post.findUnique({
+    //   where: {
+    //     id: String(blogID),
+    //   },
+    // });
+  const blogDetails =true
     if (blogDetails) {
       return NextResponse.json({
         success: true,
