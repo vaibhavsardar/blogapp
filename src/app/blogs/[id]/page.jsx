@@ -24,6 +24,6 @@ export default async function BlogDetails({ params }) {
 
 
   const blogData = await extractBlogDetails(id);
-
+  console.log("blog data ", blogData);
   return <BlogDetailsHome blogData={blogData} />;
 }
